@@ -17,7 +17,7 @@ variable "ecs_auto_scale_role_name" {
 
 variable "az_count" {
   description  = "Set number of Availability Zones in region"
-  default      = "2"
+  default      = "1"
 }
 
 variable "app_image" {
