@@ -1,5 +1,3 @@
-# hello_app.json.tpl
-
 [
   {
       "name": "hello-app",
@@ -15,7 +13,7 @@
               "awslogs-stream-prefix": "ecs"
           }
       },
-    "portMappings": [
+      "portMappings": [
         {
             "containerPort": ${app_port},
             "hostPort": ${app_port}
