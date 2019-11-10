@@ -18,7 +18,7 @@ data "template_file" "hello_app" {
 
 resource "aws_ecs_task_definition" "app" {
   family                   = "hello-app-task"
-  execution_role_arn       = "aws_iam_role.ecs_task_execution_role.arn"
+  execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
   cpu                      = var.fargate_cpu
