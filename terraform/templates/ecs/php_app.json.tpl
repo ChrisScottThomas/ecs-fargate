@@ -1,7 +1,7 @@
 [
   {
       "name": "php-app",
-      "image": "${app_image}",
+      "image": "${php_image}",
       "cpu": ${fargate_cpu},
       "memory": ${fargate_memory},
       "networkMode": "awsvpc",
@@ -15,8 +15,8 @@
       },
       "portMappings": [
         {
-            "containerPort": ${app_port},
-            "hostPort": ${app_port}
+            "containerPort": ${php_port},
+            "hostPort": ${php_port}
         }
     ]
   }
