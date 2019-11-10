@@ -25,7 +25,7 @@ resource "aws_security_group" "lb" {
 resource "aws_security_group" "ecs_tasks" {
   name        = "hello-ecs-tasks-security-group"
   description = "allow inbound from ALB only"
-  vpc_id      = aws_vpc.main.vpc_id
+  vpc_id      = aws_vpc.main.id
 
   ingress {
     protocol        = "tcp"
