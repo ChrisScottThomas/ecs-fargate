@@ -52,10 +52,10 @@ variable "health_check_path" {
 
 variable "fargate_cpu" {
   description = "Fargate CPU resource allocation"
-  default     = "2048" # 1024 == 1 vCPU
+  default     = "1024" # 1024 == 1 vCPU
 }
 
 variable "fargate_memory" {
   description  = "Fargate RAM resource allocation"
-  default      = "1024" # size in MiB
+  default      = "2048" # size in MiB
 }
