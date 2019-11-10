@@ -17,7 +17,7 @@ variable "ecs_auto_scale_role_name" {
 
 variable "az_count" {
   description  = "Set number of Availability Zones in region"
-  default      = "1"
+  default      = "2"
 }
 
 variable "app_image" {
@@ -52,7 +52,7 @@ variable "health_check_path" {
 
 variable "fargate_cpu" {
   description = "Fargate CPU resource allocation"
-  default     = "1024" # 1024 == 1 vCPU
+  default     = "2048" # 1024 == 1 vCPU
 }
 
 variable "fargate_memory" {
