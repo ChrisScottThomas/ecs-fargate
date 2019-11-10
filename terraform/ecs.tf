@@ -15,7 +15,6 @@ data "template_file" "hello_app" {
     aws_region     = var.aws_region
   }
 }
-
 resource "aws_ecs_task_definition" "app" {
   family                   = "hello-app-task"
   execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
@@ -43,8 +42,6 @@ resource "aws_ecs_service" "main" {
     target_group_arn = aws_lb_target_group.app.id
     container_name   = "hello-app"
     container_port   = var.app_port
-  }
-
+ }
   depends_on = [aws_lb_listener.front_end, aws_iam_role_policy_attachment.ecs_task_execution_role]
 }
-
