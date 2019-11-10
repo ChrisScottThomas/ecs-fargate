@@ -4,7 +4,6 @@ resource "aws_appautoscaling_target" "target" {
   service_namespace  = "ecs"
   resource_id        = "service/${aws_ecs_cluster.main.name}/${aws_ecs_service.main.name}"
   scalable_dimension = "ecs:service:DesiredCount"
-  role_arn           = aws_iam_role.ecs_auto_scale_role.arn
   min_capacity       = 1
   max_capacity       = 3
 }
@@ -27,7 +26,7 @@ resource "aws_appautoscaling_policy" "up" {
       scaling_adjustment          = 1
     }
   }
-  depends_on = [aws_appautoscalaing_target.target]
+  depends_on = [aws_appautoscaling_target.target]
 }
 
 # Autoscale by one - down
@@ -48,7 +47,7 @@ resource "aws_appautoscaling_policy" "down" {
       scaling_adjustment          = -1
     }
   }
-  depends_on = [aws_appautoscalaing_target.target]
+  depends_on = [aws_appautoscaling_target.target]
 }
 
 # Set CloudWatch triggers - up
