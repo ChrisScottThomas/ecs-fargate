@@ -4,7 +4,7 @@
 resource "aws_lb" "main" {
   name            = "hello-load-balancer"
   subnets         = aws_subnet.public.*.id
-  security_groups = [aws_security_groups.lb.id] 
+  security_groups = [aws_security_group.lb.id] 
 }
 
 resource "aws_lb_target_group" "app" {
