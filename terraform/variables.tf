@@ -25,9 +25,19 @@ variable "app_image" {
   default      = "nginxdemos/hello:plain-text" #Simple hello-world NGINX container
 }
 
+variable "php_image" {
+  description  = "Deployable PHP Docker image"
+  default      = "bitnami/php-fpm" #Simple hello-world NGINX container
+}
+
 variable "app_port" {
   description  = "Exposed port for container"
   default      = "3000"
+}
+
+variable "php_port" {
+  description  = "Exposed port for container"
+  default      = "9000"
 }
 
 variable "app_count" {
