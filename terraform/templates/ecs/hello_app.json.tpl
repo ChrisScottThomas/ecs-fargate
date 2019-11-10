@@ -11,7 +11,7 @@
           "logDriver": "awslogs",
           "options": {
               "awslogs-group": "/ecs/hello-app",
-              "awslogs-region": "${aws_region",
+              "awslogs-region": "${aws_region}",
               "awslogs-stream-prefix": "ecs"
           }
       },
