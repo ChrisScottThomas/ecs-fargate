@@ -10,6 +10,8 @@ data "template_file" "hello_app" {
   vars = {
     app_image      = var.app_image
     app_port       = var.app_port
+    php_image      = var.php_image
+    php_port       = var.php_port
     fargate_cpu    = var.fargate_cpu
     fargate_memory = var.fargate_memory
     aws_region     = var.aws_region
