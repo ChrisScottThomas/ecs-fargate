@@ -53,7 +53,7 @@ resource "aws_appautoscaling_policy" "down" {
 # Set CloudWatch triggers - up
 resource "aws_cloudwatch_metric_alarm" "service_cpu_high" {
   alarm_name          = "hello_cpu_utilisation_high"
-  comparison_operator = "LessThanOrEqualtoThreshold"
+  comparison_operator = "LessThanOrEqualToThreshold"
   evaluation_periods  = "2"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS"
@@ -73,7 +73,7 @@ resource "aws_cloudwatch_metric_alarm" "service_cpu_high" {
 # Set CloudWatch triggers - down
 resource "aws_cloudwatch_metric_alarm" "service_cpu_low" {
   alarm_name          = "hello_cpu_utilisation_low"
-  comparison_operator = "LessThanOrEqualtoThreshold"
+  comparison_operator = "LessThanOrEqualToThreshold"
   evaluation_periods  = "2"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS"
