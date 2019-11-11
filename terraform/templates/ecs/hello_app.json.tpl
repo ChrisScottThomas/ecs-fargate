@@ -2,8 +2,8 @@
   {
       "name": "hello-app",
       "image": "${app_image}",
-      "cpu": ${fargate_cpu},
-      "memory": ${fargate_memory},
+      "cpu": 256,
+      "memory": 512,
       "networkMode": "awsvpc",
       "logConfiguration": {
           "logDriver": "awslogs",
@@ -17,6 +17,27 @@
         {
             "containerPort": ${app_port},
             "hostPort": ${app_port}
+        }
+    ]
+  },
+  {
+      "name": "php-app",
+      "image": "${php_image}",
+      "cpu": 256,
+      "memory": 512,
+      "networkMode": "awsvpc",
+      "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+              "awslogs-group": "/ecs/php-app",
+              "awslogs-region": "${aws_region}",
+              "awslogs-stream-prefix": "ecs"
+          }
+      },
+      "portMappings": [
+        {
+            "containerPort": ${php_port},
+            "hostPort": ${php_port}
         }
     ]
   }
