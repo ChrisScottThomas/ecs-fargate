@@ -22,17 +22,17 @@ variable "az_count" {
 
 variable "app_image" {
   description  = "Deployable Docker image"
-  default      = "nginxdemos/hello:plain-text" #Simple hello-world NGINX container
+  default      = "docker.io/chrisscottthomas/nginx" #Simple NGINX container
 }
 
 variable "php_image" {
   description  = "Deployable PHP Docker image"
-  default      = "bitnami/php-fpm" #Simple hello-world NGINX container
+  default      = "docker.io/chrisscottthomas/php-fpm" #Simple PHP container
 }
 
 variable "app_port" {
   description  = "Exposed port for container"
-  default      = "3000"
+  default      = "80"
 }
 
 variable "php_port" {
