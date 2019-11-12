@@ -1,3 +1,3 @@
 FROM nginxdemos/hello
 
-COPY default.conf /etc/nginx/conf.d/default.conf
+ADD hello.conf /etc/nginx/conf.d/
