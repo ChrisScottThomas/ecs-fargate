@@ -22,7 +22,7 @@ variable "az_count" {
 
 variable "app_image" {
   description  = "Deployable Docker image"
-  default      = "docker.io/chrisscottthomas/nginx" #Simple NGINX container
+  default      = "docker.io/chrisscottthomas/nginx:1.0.2" #Simple NGINX container
 }
 
 variable "php_image" {
