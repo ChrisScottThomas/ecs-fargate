@@ -29,7 +29,7 @@
       "logConfiguration": {
           "logDriver": "awslogs",
           "options": {
-              "awslogs-group": "/ecs/php-app",
+              "awslogs-group": "/ecs/hello-app",
               "awslogs-region": "${aws_region}",
               "awslogs-stream-prefix": "ecs"
           }
