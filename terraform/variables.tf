@@ -27,7 +27,7 @@ variable "app_image" {
 
 variable "php_image" {
   description  = "Deployable PHP Docker image"
-  default      = "docker.io/chrisscottthomas/php-fpm" #Simple PHP container
+  default      = "docker.io/chrisscottthomas/php-fpm:1.0.0" #Simple PHP container
 }
 
 variable "app_port" {
